@@ -4,73 +4,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Symfony Frontend Performance Demo Site</title>
 
-        {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/yahoo-reset.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/ui.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/typography.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/main.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/lablog.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/show.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/search.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/login.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/comments.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/bloat.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy1.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy2.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy3.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy4.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy5.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy6.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy7.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy8.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy9.css') }}" media="all" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/visualize-ie-problem.css') }}" media="all" type="text/css" />
-        {% endblock %}
+        {% include 'DbuCoreBundle::stylesheets.html.twig' %}
 
-        {% block javascripts %}
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-1.7.2.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery.defaultify.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/quicksearch.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/highlight.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.core.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.core.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.widget.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.blind.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.bounce.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.clip.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.drop.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.explode.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.fade.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.fold.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.highlight.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.pulsate.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.scale.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.shake.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.slide.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.transfer.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.accordion.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.autocomplete.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.button.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.datepicker.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.dialog.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.mouse.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.draggable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.droppable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.position.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.progressbar.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.resizable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.selectable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.slider.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.sortable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.tabs.js') }}"></script>
-        {% endblock %}
-
+        {% include 'DbuCoreBundle::javascripts.html.twig' %}
 
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
     <body>
         <div id="container">
+
         <div id="header">
             {% block header %}
             <div class="inline">
@@ -146,6 +89,7 @@
                 {% endblock %}
             </div>
         </div>
+
         </div>
     </body>
 </html>
