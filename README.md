@@ -19,7 +19,7 @@ unrealistic latencies. To get the full pain, I did:
 * Disable symfony caching by adding ``cache: false`` to the twig section in config.yml
 * Disable gzip compression in Apache by adding ``SetEnv no-gzip`` to the vhost entry
 * Disable KeepAlive in apache.conf to make the problem of lots of single files more visible
-* Use [sloppy](http://www.dallaway.com/sloppy/) to simulate a low bandwith
+* Use netem or [sloppy](http://www.dallaway.com/sloppy/) to simulate a low bandwith
 
 Of course, using and optimizing these features instead of disabling them can be
 a cheap way to speed up your website. You should look into this topic as well.
@@ -98,3 +98,10 @@ the webroot, go to:
 
 To see the performance impact of things, do not use the app_dev.php entry point
 but the production entry point.
+
+### e) Make your webserver realistically slow
+
+With netem, use something like this when running the site locally:
+
+    sudo tc qdisc add dev lo root netem delay 300ms 30ms
+    sudo tc qdisc change dev lo root netem loss 0.10%
