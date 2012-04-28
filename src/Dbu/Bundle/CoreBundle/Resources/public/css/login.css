@@ -1,0 +1,12 @@
+.twitter {
+  border-top:1px solid #bec9d5;
+  margin-top:20px;
+  padding-top:20px;
+}
+#twitter_connect {
+  background:url('/bundles/rocketlabuser/images/sign-in-with-twitter-d.png') no-repeat;
+  width:160px;
+  height:25px;
+  display:block;
+}
+.login_error { margin-left:164px; }

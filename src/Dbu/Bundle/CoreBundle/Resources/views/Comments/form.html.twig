@@ -1,0 +1,8 @@
+<div class="comment-new">
+    <h3>Add your comment:</h3>
+    <form action="{{ path('comment_new') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+
+        <input type="submit" value="Comment" />
+    </form>
+</div>

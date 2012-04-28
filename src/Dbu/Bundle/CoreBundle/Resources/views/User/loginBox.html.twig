@@ -1,0 +1,6 @@
+{% if app.user %}
+    Logged in as {{ app.user.userName }}
+    - <a href="{{ path('logout') }}">Logout</a>
+{% else %}
+    <a href="{{ path('login') }}">Login</a>
+{% endif %}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Symfony Frontend Performance Demo Site</title>
+
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/yahoo-reset.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/ui.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/typography.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/main.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/lablog.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/show.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/search.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/login.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/comments.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/bloat.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy1.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy2.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy3.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy4.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy5.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy6.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy7.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy8.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy9.css') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbucore/css/visualize-ie-problem.css') }}" media="all" type="text/css" />
+        {% endblock %}
+
+        {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-1.7.2.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery.defaultify.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/quicksearch.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/highlight.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.core.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.core.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.widget.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.blind.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.bounce.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.clip.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.drop.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.explode.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.fade.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.fold.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.highlight.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.pulsate.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.scale.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.shake.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.slide.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.transfer.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.accordion.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.autocomplete.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.button.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.datepicker.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.dialog.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.mouse.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.draggable.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.droppable.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.position.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.progressbar.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.resizable.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.selectable.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.slider.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.sortable.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.tabs.js') }}"></script>
+        {% endblock %}
+
+
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body>
+        <div id="container">
+        <div id="header">
+            {% block header %}
+            <div class="inline">
+
+                <ul class="top_nav">
+                    <li><a class="backlink" href="http://www.liip.ch">www.liip.ch</a></li>
+                    <li class=login>
+                        {% render 'DbuCoreBundle:User:showLoginBox' %}
+                    </li>
+                </ul>
+
+                <a href="/"><span class="sprite logo"></span></a>
+            </div>
+            {% endblock %}
+        </div>
+
+        <div id="featured">
+            <div class="inline">
+                <h2>
+                    Featured
+                    <a class="sprite rss_feed" href="http://feeds.liip.ch/rocketlab_events"><span><abbr title="Really Simple Syndication">RSS</abbr> feed</span></a>
+                </h2>
+
+
+                <div class="box " onclick="window.location.href='http://symfony.com/doc/current/cookbook/assetic/asset_management.html'">
+                    <a href="http://symfony.com/doc/current/cookbook/assetic/asset_management.html" class="title">Assetic for Asset Management</a>
+                    <p>
+                        by Kris Wallsmith</p>
+                    <span class="sprite featuredbox_arrow"></span>
+                </div>
+
+                <div class="box " onclick="window.location.href='https://www.varnish-cache.org/'">
+                    <a href="https://www.varnish-cache.org/" class="title">Varnish web accelerator</a>
+                    <p>
+                        by Varnish Software AS</p>
+                    <span class="sprite featuredbox_arrow"></span>
+                </div>
+
+                <div class="box edge" onclick="window.location.href='https://github.com/liip/LiipCacheControlBundle'">
+                    <a href="https://github.com/liip/LiipCacheControlBundle" class="title">Liip CacheControl Bundle</a>
+                    <p>
+                        by Lukas K Smith, David Buchmann and others</p>
+                    <span class="sprite featuredbox_arrow"></span>
+                </div>
+
+                <br class="clear"/>
+            </div>
+        </div>
+
+        <div id="body">
+            <div class="inline">
+                <div id="content">
+                    {% block searchbox %}
+                        <div id="quicksearch">
+                            <form class="quick_search" action="#">
+                                <label for="query">Search this site</label>
+                                <input type="text" class="query" id="query" name="q" value="search" />
+                                <input type="submit" class="button" value="Search" />
+                            </form>
+                        </div>
+
+                        <div class="clear" style="margin-top: 35px;"></div>
+                    {% endblock %}
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner">
+                {% block footer %}
+                    <p>Symfony2 frontend performance optimizations<br/>Powered by Symfony2</p>
+                    <a href="http://www.liip.ch" class="sprite footer-logo"></a>
+                {% endblock %}
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

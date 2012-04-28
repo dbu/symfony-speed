@@ -1,0 +1,19 @@
+home:
+    pattern:  /
+    defaults: { _controller: DbuCoreBundle:Default:index }
+
+login:
+    pattern: /login
+    defaults: { _controller: DbuCoreBundle:User:login }
+
+check:
+    pattern: /login_check
+
+logout:
+    pattern:  /logout
+
+comment_new:
+    pattern: /comment
+    defaults: { _controller: DbuCoreBundle:Comments:post,  }
+    requirements:
+        _method:  POST

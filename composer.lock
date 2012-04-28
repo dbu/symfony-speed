@@ -1,0 +1,83 @@
+{
+    "hash": "189e402c5113ba96ef897aaea50409a3",
+    "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "2.2.x-dev",
+            "source-reference": "1e0aa60d109c630d19543d999f12e2852ef8f932"
+        },
+        {
+            "package": "jms/aop-bundle",
+            "version": "1.0.0"
+        },
+        {
+            "package": "jms/cg",
+            "version": "1.0.0"
+        },
+        {
+            "package": "jms/di-extra-bundle",
+            "version": "1.0.1"
+        },
+        {
+            "package": "jms/metadata",
+            "version": "1.1.1"
+        },
+        {
+            "package": "jms/security-extra-bundle",
+            "version": "1.1.0"
+        },
+        {
+            "package": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "source-reference": "eb3b5eb732e5f172d5aa12dea0af36b7989c18b3"
+        },
+        {
+            "package": "monolog/monolog",
+            "version": "1.0.2"
+        },
+        {
+            "package": "sensio/distribution-bundle",
+            "version": "dev-master",
+            "source-reference": "38be63ebb45cc1fbeaff3f2bdf6d0ed216305a24"
+        },
+        {
+            "package": "sensio/framework-extra-bundle",
+            "version": "dev-master",
+            "source-reference": "94a9615c6e52a3d02ca7f44eee56f20e0c5c4622"
+        },
+        {
+            "package": "sensio/generator-bundle",
+            "version": "dev-master",
+            "source-reference": "06d07e0514d310be8d5630bfd93637136991c30c"
+        },
+        {
+            "package": "symfony/assetic-bundle",
+            "version": "dev-master",
+            "source-reference": "d370e914e86518e88aa00ab266796ee032b8262e"
+        },
+        {
+            "package": "symfony/monolog-bundle",
+            "version": "dev-master",
+            "source-reference": "289442e385e7c0fe4aa2e8884d11e774a8f9ad99"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "dev-master",
+            "source-reference": "85bb43935669eb1e92a5b32f5f20872f34377300",
+            "alias": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "twig/extensions",
+            "version": "dev-master",
+            "source-reference": "446d870272cd87a720e95242eade38a2acf56eaa"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "source-reference": "037f86aa550737abf633e991f3606b9de5a69657",
+            "alias": "1.7.9999999.9999999-dev"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": []
+}

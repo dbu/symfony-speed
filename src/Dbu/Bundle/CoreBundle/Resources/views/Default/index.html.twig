@@ -1,0 +1,27 @@
+{% extends 'DbuCoreBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>The Symfony2 Frontend Performance Demo Site</h1>
+<p>
+    This site is a tutorial for Symfony2 frontend performance steps. The code
+    has a couple of branches that show different steps of optimization.
+    The functionality of the application does not change.
+</p>
+<p>
+    Please read the <a href="https://github.com/dbu/symfony-speed/wiki">project wiki</a>
+    for documentation about the various branches. This project runs on pure
+    symfony without even a database. The only additional dependency for the
+    advanced steps is the caching reverse proxy Varnish.
+</p>
+
+<div class="highlight">
+    <h3>Javascript</h3>
+    <p>This section is highlighted in to have some jquery action at the point when the document is ready.</p>
+</div>
+
+<p class="hidden-section">
+    If you see this, you have internet explorer and the CSS files are not grouped. IE only uses the first 16 css files.
+</p>
+
+{% render 'DbuCoreBundle:Comments:comments' %}
+{% endblock %}

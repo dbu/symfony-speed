@@ -1,0 +1,53 @@
+.lablog ul {
+  margin:0;
+  padding:0;
+}
+.lablog ul li {
+  display:block;
+  margin-bottom:13px;
+  border-bottom:1px solid #bec9d5;
+  color:#383b41;
+  list-style:none;
+  text-align:justify;
+}
+.lablog ul li div.title { margin-bottom:8px; }
+.lablog ul li div.title span.calendar {
+  float:left;
+  margin:10px 0 0 2px;
+}
+.lablog ul li div.title h2 {
+  float:left;
+  width:535px;
+  margin:0;
+  padding:0 0 0 8px;
+  font-size:2em;
+  color:#383b41;
+  text-align:left;
+}
+.lablog ul li div.title div.button {
+  float:right;
+  width:24px;
+  height:24px;
+  margin-left:4px;
+  background-color:#e6e6e6;
+  border:1px solid #cdcdcd;
+  box-shadow:1px 1px #f6f6f6;
+  -moz-box-shadow:1px 1px #f6f6f6;
+  -webkit-box-shadow:1px 1px #f6f6f6;
+}
+.lablog ul li div.title div.button .edit { margin:5px 4px; }
+.lablog ul li div.title div.button .delete { margin:6px; }
+.lablog ul li .meta-info {
+  padding-left:26px;
+  font-size:1.2em;
+}
+.lablog ul li .meta-info div.location {
+  float:left;
+  font-weight:bold;
+}
+.lablog ul li .desc {
+  margin:2px 0 16px 0;
+  padding-left:26px;
+  font-size:1.2em;
+  color:#24272e;
+}

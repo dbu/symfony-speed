@@ -1,0 +1,11 @@
+<div id="comments">
+<h3>Comments</h3>
+{% for comment in comments %}
+<div class="comment-body">
+    <span class="sprite comment"></span>
+    <span class="comment-author">{{ comment.author }}:</span>
+    <span class="comment-text">{{ comment.text }}</span>
+</div>
+{% endfor %}
+{% render 'DbuCoreBundle:Comments:form' %}
+</div>

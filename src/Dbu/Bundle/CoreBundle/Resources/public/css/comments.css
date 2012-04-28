@@ -1,0 +1,39 @@
+#comments {
+    margin-top: 24px;
+    width: 100%;
+}
+#comments h3 {
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #BEC9D5;
+}
+.comment-body {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #BEC9D5;
+}
+.comment {
+    float: left;
+    padding-right: 8px;
+    margin-top: 4px;
+}
+.comment-author {
+    font-style: italic;
+}
+.comment-new {
+    padding-top: 18px;
+}
+#comments .comment-new h3 {
+    margin-bottom: 6px;
+    border-bottom: none;
+}
+.comment-new div {
+    display: inline;
+}
+.comment-new input {
+    margin-right: 12px;
+}
+.comment-new label {
+    padding-right: 6px;
+}
