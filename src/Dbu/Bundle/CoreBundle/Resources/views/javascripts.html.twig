@@ -1,37 +1,42 @@
 {% block javascripts %}
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-1.7.2.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery.defaultify.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/quicksearch.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/highlight.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.core.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.core.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.widget.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.blind.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.bounce.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.clip.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.drop.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.explode.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.fade.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.fold.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.highlight.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.pulsate.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.scale.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.shake.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.slide.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.effects.transfer.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.accordion.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.autocomplete.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.button.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.datepicker.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.dialog.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.mouse.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.draggable.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.droppable.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.position.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.progressbar.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.resizable.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.selectable.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.slider.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.sortable.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/dbucore/js/jquery-ui/jquery.ui.tabs.js') }}"></script>
+    {% javascripts
+        '@DbuCoreBundle/Resources/public/js/jquery-1.7.2.js'
+        '@DbuCoreBundle/Resources/public/js/jquery.defaultify.js'
+        '@DbuCoreBundle/Resources/public/js/quicksearch.js'
+        '@DbuCoreBundle/Resources/public/js/highlight.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.core.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.core.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.widget.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.blind.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.bounce.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.clip.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.drop.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.explode.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.fade.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.fold.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.highlight.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.pulsate.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.scale.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.shake.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.slide.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.effects.transfer.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.accordion.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.autocomplete.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.button.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.datepicker.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.dialog.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.mouse.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.draggable.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.droppable.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.position.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.progressbar.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.resizable.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.selectable.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.slider.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.sortable.js'
+        '@DbuCoreBundle/Resources/public/js/jquery-ui/jquery.ui.tabs.js'
+        output='js/scripts.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}
