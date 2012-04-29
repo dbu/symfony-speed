@@ -6,37 +6,36 @@
 .comment {
   width:14px;
   height:13px;
-    background-image:url(/bundles/dbucore/images/comment.png)
+  background-image:url(/bundles/dbucore/images/comment.png);
 }
 .featuredbox_arrow {
   width:5px;
   height:9px;
-  background-image:url(/bundles/dbucore/images/featuredbox_arrow.png)
+  background-image:url(/bundles/dbucore/images/featuredbox_arrow.png);
 }
 .footer-logo {
   width:56px;
   height:21px;
-  background-image:url(/bundles/dbucore/images/footer_logo.png)
+  background-image:url(/bundles/dbucore/images/footer_logo.png);
 }
 .logo {
   width:336px;
   height:63px;
-  background-image:url(/bundles/dbucore/images/logo.png)
+  background-image:url(/bundles/dbucore/images/logo.png);
 }
 .rss_feed {
     height: 17px;
     width: 17px;
-    background-image:url(/bundles/dbucore/images/rss_feed.png)
+    background-image:url(/bundles/dbucore/images/rss_feed.png);
 }
 #quicksearch input.button {
-    background-image:url(/bundles/dbucore/images/search.png)
+    background-image:url(/bundles/dbucore/images/search.png);
 }
 #container #body {
     background-repeat:repeat-x;
-    background-image:url(/bundles/dbucore/images/gradients.png);
-    background-position:0 -118px;
+    background-image:url(/bundles/dbucore/images/bg_body.png);
 }
 #footer {
   background-repeat:repeat-x;
-  background-image:url(/bundles/dbucore/images/gradients.png);
+  background-image:url(/bundles/dbucore/images/bg_footer.png);
 }
