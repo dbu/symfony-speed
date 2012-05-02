@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Pminnieur\SpritesBundle\PminnieurSpritesBundle(),
+            new Liip\CacheControlBundle\LiipCacheControlBundle(),
             new Dbu\Bundle\CoreBundle\DbuCoreBundle(),
         );
 
