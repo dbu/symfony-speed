@@ -55,3 +55,4 @@ liip_cache_control:
         domain: http://performance.lo
         ips: 127.0.0.1 # comma separated list of ips, or an array of ips
         port: 6081  # port varnish is listening on for incoming web connections
+
