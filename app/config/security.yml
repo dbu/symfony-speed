@@ -30,7 +30,8 @@ security:
             form_login:
                 check_path: /login_check
                 login_path: /login
-            logout: true
+            logout:
+                invalidate_session: true
 
     access_control:
         - { path: /admin/.*, role: ROLE_ADMIN }

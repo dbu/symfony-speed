@@ -45,7 +45,9 @@ pminnieur_sprites:
 
 liip_cache_control:
     rules:
+        # Make sure login and logout are not cached at all
+        - { path: ^/(login|login_check|logout), controls: {private: true, max_age: 0}}
         # Cache the homepage for 10 minutes
-        - { path: ^/$, controls: { public: true, max_age: 600, last_modified: "-1 hour" } }
+        - { path: ^/$, vary: Cookie, controls: { public: true, max_age: 600, last_modified: "-1 hour" } }
         # Cache every other page for 1 hour
-        - { path: ^/, controls: { public: true, max_age: 3600, last_modified: "-1 hour" } }
+        - { path: ^/, vary: Cookie, controls: { public: true, max_age: 3600, last_modified: "-1 hour" } }
