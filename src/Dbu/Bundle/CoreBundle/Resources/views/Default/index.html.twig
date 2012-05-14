@@ -23,5 +23,5 @@
     If you see this, you have internet explorer and the CSS files are not grouped. IE only uses the first 16 css files.
 </p>
 
-{% render 'DbuCoreBundle:Comments:comments' %}
+{% render 'DbuCoreBundle:Comments:comments' with {}, {'standalone': true} %}
 {% endblock %}

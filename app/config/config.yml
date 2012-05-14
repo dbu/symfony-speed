@@ -14,12 +14,9 @@ framework:
         engines: ['twig']
         assets_version: v1
     default_locale:  %locale%
-<<<<<<< HEAD
     session: ~
-=======
-    session:
-        auto_start:     false
->>>>>>> add varnish configuration for purge cache and custom ttl header, configure symfony to purge cache and send custom ttl header
+    esi:
+        enabled: true
 
 # Twig Configuration
 twig:
@@ -53,9 +50,9 @@ liip_cache_control:
         # Make sure login and logout are not cached at all
         - { path: ^/(login|login_check|logout), controls: {private: true, max_age: 0}}
         # Cache the homepage for 10 minutes
-        - { path: ^/$, vary: Cookie, reverse_proxy_ttl: 3600, controls: { public: true, max_age: 600, last_modified: "-1 hour" } }
-        # Cache every other page for 1 hour
-        - { path: ^/, vary: Cookie, reverse_proxy_ttl: 3600, controls: { public: true, max_age: 3600, last_modified: "-1 hour" } }
+        - { path: ^/$, reverse_proxy_ttl: 3600, controls: { public: true, max_age: 600, last_modified: "-1 hour" } }
+        # Cache every other page that has not an _internal route for 1 hour
+        - { path: ^/[^_], reverse_proxy_ttl: 3600, controls: { public: true, max_age: 3600, last_modified: "-1 hour" } }
     varnish:
         domain: http://performance.lo
         ips: 127.0.0.1 # comma separated list of ips, or an array of ips
