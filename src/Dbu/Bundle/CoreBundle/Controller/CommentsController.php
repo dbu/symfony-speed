@@ -36,6 +36,10 @@ class CommentsController extends Controller
                 die('failed to write the data file');
             }
 
+            // invalidate the varnish cache of home page so the new comment is shown
+            $varnish = $this->container->get('liip_cache_control.varnish');
+            $varnish->invalidatePath($this->generateUrl('home'));
+
             return $this->redirect($this->generateUrl('home'));
         }
     }
