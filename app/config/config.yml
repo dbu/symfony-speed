@@ -31,3 +31,12 @@ assetic:
         cssrewrite: ~
         #yui_css:
         #    jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
+
+pminnieur_sprites:
+    defaults:
+        selector: ".{{filename}}{background-position:-{{pointer}}px 0px}"
+    spritesets:
+        sprites:
+            sources: "%kernel.root_dir%/../src/Dbu/Bundle/CoreBundle/Resources/sprites/"
+            image: "%kernel.root_dir%/../web/assets/images/sprites.png"
+            stylesheet: "%kernel.root_dir%/cache/dev/sprites/sprites.css"

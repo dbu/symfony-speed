@@ -1,5 +1,5 @@
 {
-    "hash": "0807f22025f1205ccb7573a463e9348a",
+    "hash": "d495cd49e30c5f264cfc30d8b3daeeb3",
     "packages": [
         {
             "name": "doctrine/common",
@@ -68,6 +68,50 @@
                 "eventmanager",
                 "annotations",
                 "persistence"
+            ]
+        },
+        {
+            "name": "imagine/Imagine",
+            "version": "v0.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avalanche123/Imagine",
+                "reference": "v0.2.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/avalanche123/Imagine/zipball/v0.2.8",
+                "reference": "v0.2.8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "time": "2011-11-29 23:38:41",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Imagine": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "image manipulation",
+                "image processing",
+                "drawing",
+                "graphics"
             ]
         },
         {
@@ -449,6 +493,143 @@
             "keywords": [
                 "log",
                 "logging"
+            ]
+        },
+        {
+            "name": "phly/mustache",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weierophinney/phly_mustache",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/weierophinney/phly_mustache/zipball/1.0.0",
+                "reference": "1.0.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "2012-03-14 14:06:26",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phly": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Matthew Weier O'Phinney",
+                    "email": "me@mwop.net",
+                    "homepage": "http://mwop.net/"
+                }
+            ],
+            "description": "PHP 5.3 Mustache Implementation",
+            "homepage": "http://wiki.github.com/weierophinney/phly_mustache/",
+            "keywords": [
+                "mustache"
+            ]
+        },
+        {
+            "name": "pminnieur/sprites",
+            "version": "dev-assetic",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pminnieur/sprites",
+                "reference": "d13ff5760f1865a7e2eca67b4d692680aa97827a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/pminnieur/sprites/archive/d13ff5760f1865a7e2eca67b4d692680aa97827a.zip",
+                "reference": "d13ff5760f1865a7e2eca67b4d692680aa97827a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "phly/mustache": "1.0.*",
+                "imagine/imagine": "0.2.*",
+                "symfony/console": ">=2.0,<2.2",
+                "symfony/finder": ">=2.0,<2.2"
+            },
+            "require-dev": {
+                "kriswallsmith/assetic": "1.0.*"
+            },
+            "suggest": {
+                "kriswallsmith/assetic": "Asset Management for PHP 5.3"
+            },
+            "time": "2012-05-18 08:31:55",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sprites": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Minnieur",
+                    "email": "pm@pierre-minnieur.de",
+                    "homepage": "http://pierre-minnieur.de/"
+                }
+            ],
+            "description": "A simple image sprite and stylesheet generator.",
+            "homepage": "http://sprites.readthedocs.org/",
+            "keywords": [
+                "sprites"
+            ]
+        },
+        {
+            "name": "pminnieur/sprites-bundle",
+            "version": "dev-master",
+            "target-dir": "Pminnieur/SpritesBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/pminnieur/SpritesBundle.git",
+                "reference": "2675ce56a45d377eb1ab92b1bf78c40d544da6fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/pminnieur/SpritesBundle/archive/2675ce56a45d377eb1ab92b1bf78c40d544da6fa.zip",
+                "reference": "2675ce56a45d377eb1ab92b1bf78c40d544da6fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "pminnieur/sprites": "dev-assetic",
+                "symfony/symfony": "2.*"
+            },
+            "time": "2013-01-28 19:42:44",
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Pminnieur\\SpritesBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Minnieur",
+                    "email": "pm@pierre-minnieur.de",
+                    "homepage": "http://pierre-minnieur.de/"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "mail@davidbu.ch"
+                }
+            ],
+            "description": "Symfony bundle for the simple image sprite and stylesheet generator.",
+            "homepage": "http://sprites.readthedocs.org/",
+            "keywords": [
+                "sprites"
             ]
         },
         {
@@ -906,6 +1087,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "twig/extensions": 20,
-        "kriswallsmith/assetic": 20
+        "kriswallsmith/assetic": 20,
+        "pminnieur/sprites-bundle": 20
     }
 }

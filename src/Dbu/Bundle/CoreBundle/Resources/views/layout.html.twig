@@ -32,7 +32,7 @@
             <div class="inline">
                 <h2>
                     Featured
-                    <a class="sprite rss_feed" href="http://feeds.liip.ch/rocketlab_events"><span><abbr title="Really Simple Syndication">RSS</abbr> feed</span></a>
+                    <a class="sprite rss-feed" href="http://feeds.liip.ch/rocketlab_events"><span><abbr title="Really Simple Syndication">RSS</abbr> feed</span></a>
                 </h2>
 
 
@@ -40,28 +40,28 @@
                     <a href="http://symfony.com/doc/current/cookbook/assetic/asset_management.html" class="title">Assetic for Asset Management</a>
                     <p>
                         by Kris Wallsmith</p>
-                    <span class="sprite featuredbox_arrow"></span>
+                    <span class="sprite featuredbox-arrow"></span>
                 </div>
 
                 <div class="box " onclick="window.location.href='https://www.varnish-cache.org/'">
                     <a href="https://www.varnish-cache.org/" class="title">Varnish web accelerator</a>
                     <p>
                         by Varnish Software AS</p>
-                    <span class="sprite featuredbox_arrow"></span>
+                    <span class="sprite featuredbox-arrow"></span>
                 </div>
 
                 <div class="box edge" onclick="window.location.href='https://github.com/liip/LiipCacheControlBundle'">
                     <a href="https://github.com/liip/LiipCacheControlBundle" class="title">Liip CacheControl Bundle</a>
                     <p>
                         by Lukas K Smith, David Buchmann and others</p>
-                    <span class="sprite featuredbox_arrow"></span>
+                    <span class="sprite featuredbox-arrow"></span>
                 </div>
 
                 <br class="clear"/>
             </div>
         </div>
 
-        <div id="body">
+        <div id="body" class="bg-body">
             <div class="inline">
                 <div id="content">
                     {% block searchbox %}
@@ -69,7 +69,7 @@
                             <form class="quick_search" action="#">
                                 <label for="query">Search this site</label>
                                 <input type="text" class="query" id="query" name="q" value="search" />
-                                <input type="submit" class="button" value="Search" />
+                                <input type="submit" class="button sprite search" value="Search" />
                             </form>
                         </div>
 
