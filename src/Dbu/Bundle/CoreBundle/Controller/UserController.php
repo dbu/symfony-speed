@@ -24,7 +24,7 @@ class UserController extends Controller
     public function showLoginBoxAction()
     {
         $response = $this->render('DbuCoreBundle:User:loginBox.html.twig', array());
-        $response->setVary('Cookies', false); // true would mean to overwrite current vary setting
+        $response->setVary('Cookie', false); // true would mean to overwrite current vary setting
         $response->setMaxAge(0);
         $response->setPrivate();
         return $response;

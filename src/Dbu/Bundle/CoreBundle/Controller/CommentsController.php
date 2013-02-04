@@ -28,7 +28,7 @@ class CommentsController extends Controller
         // depends on the session to inline the user name
         // it this is the only bit that prevents caching, you could use javascript
         // to pre-fill the name in the frontend and cache the form
-        $response->setVary('Cookies', false);
+        $response->setVary('Cookie', false);
         $response->setMaxAge(0);
         $response->setPrivate();
         return $response;
