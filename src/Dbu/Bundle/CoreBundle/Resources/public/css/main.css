@@ -78,13 +78,13 @@ h3 {
     text-transform:capitalize;
     position: relative;
 }
-#container #featured .inline h2 .rss_feed {
+#container #featured .inline h2 .rss-feed {
     display: block;
     position: absolute;
     right: 3px;
     top: 40px;
 }
-#container #featured .inline .rss_feed span {
+#container #featured .inline .rss-feed span {
     left: -9000px;
     position: absolute;
 }
@@ -108,7 +108,7 @@ h3 {
   font-weight:bold;
   color:#383b41;
 }
-#container #featured .inline .featuredbox_arrow, #container #featured .inline .featuredbox_arrow2 {
+#container #featured .inline .featuredbox-arrow, #container #featured .inline .featuredbox_arrow2 {
   position:absolute;
   right:-5px;
   top:8px;

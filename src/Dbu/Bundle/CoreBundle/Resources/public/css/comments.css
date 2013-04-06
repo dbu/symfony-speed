@@ -15,7 +15,7 @@
 }
 .comment {
     float: left;
-    padding-right: 8px;
+    margin-right: 8px;
     margin-top: 4px;
 }
 .comment-author {
