@@ -1,5 +1,5 @@
 {
-    "hash": "d495cd49e30c5f264cfc30d8b3daeeb3",
+    "hash": "6ae4d01fb2c79f25bef02d9aa27ef057",
     "packages": [
         {
             "name": "doctrine/common",
@@ -437,6 +437,60 @@
                 "assets",
                 "compression",
                 "minification"
+            ]
+        },
+        {
+            "name": "liip/cache-control-bundle",
+            "version": "dev-master",
+            "target-dir": "Liip/CacheControlBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/liip/LiipCacheControlBundle.git",
+                "reference": "33bc7805c76359a6fcff5010850e117864699a6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/liip/LiipCacheControlBundle/archive/33bc7805c76359a6fcff5010850e117864699a6a.zip",
+                "reference": "33bc7805c76359a6fcff5010850e117864699a6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.0.14,<=2.3-dev"
+            },
+            "require-dev": {
+                "ext-curl": "*"
+            },
+            "suggest": {
+                "ext-curl": "Used by Varnish Helper to construct requests."
+            },
+            "time": "2013-01-07 13:15:44",
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Liip\\CacheControlBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/liip/LiipThemeBundle/contributors"
+                },
+                {
+                    "name": "Liip AG",
+                    "homepage": "http://www.liip.ch/"
+                }
+            ],
+            "description": "This Bundle provides a way to set path based cache expiration headers via the app configuration and provides a helper to control the reverse proxy varnish.",
+            "keywords": [
+                "http",
+                "esi",
+                "caching",
+                "varnish"
             ]
         },
         {
@@ -1088,6 +1142,7 @@
     "stability-flags": {
         "twig/extensions": 20,
         "kriswallsmith/assetic": 20,
-        "pminnieur/sprites-bundle": 20
+        "pminnieur/sprites-bundle": 20,
+        "liip/cache-control-bundle": 20
     }
 }

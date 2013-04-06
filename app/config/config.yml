@@ -10,7 +10,9 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    templating:
+        engines: ['twig']
+        assets_version: v1
     default_locale:  %locale%
     session: ~
 
@@ -40,3 +42,10 @@ pminnieur_sprites:
             sources: "%kernel.root_dir%/../src/Dbu/Bundle/CoreBundle/Resources/sprites/"
             image: "%kernel.root_dir%/../web/assets/images/sprites.png"
             stylesheet: "%kernel.root_dir%/cache/dev/sprites/sprites.css"
+
+liip_cache_control:
+    rules:
+        # Cache the homepage for 10 minutes
+        - { path: ^/$, controls: { public: true, max_age: 600, last_modified: "-1 hour" } }
+        # Cache every other page for 1 hour
+        - { path: ^/, controls: { public: true, max_age: 3600, last_modified: "-1 hour" } }
