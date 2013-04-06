@@ -1,22 +1,27 @@
 {% block stylesheets %}
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/yahoo-reset.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/ui.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/typography.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/main.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/lablog.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/show.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/search.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/login.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/comments.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/bloat.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy1.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy2.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy3.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy4.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy5.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy6.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy7.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy8.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/dummy9.css') }}" media="all" type="text/css" />
-<link rel="stylesheet" href="{{ asset('bundles/dbucore/css/visualize-ie-problem.css') }}" media="all" type="text/css" />
+    {% stylesheets
+        '@DbuCoreBundle/Resources/public/css/yahoo-reset.css'
+        '@DbuCoreBundle/Resources/public/css/ui.css'
+        '@DbuCoreBundle/Resources/public/css/typography.css'
+        '@DbuCoreBundle/Resources/public/css/main.css'
+        '@DbuCoreBundle/Resources/public/css/lablog.css'
+        '@DbuCoreBundle/Resources/public/css/show.css'
+        '@DbuCoreBundle/Resources/public/css/search.css'
+        '@DbuCoreBundle/Resources/public/css/login.css'
+        '@DbuCoreBundle/Resources/public/css/comments.css'
+        '@DbuCoreBundle/Resources/public/css/bloat.css'
+        '@DbuCoreBundle/Resources/public/css/dummy1.css'
+        '@DbuCoreBundle/Resources/public/css/dummy2.css'
+        '@DbuCoreBundle/Resources/public/css/dummy3.css'
+        '@DbuCoreBundle/Resources/public/css/dummy4.css'
+        '@DbuCoreBundle/Resources/public/css/dummy5.css'
+        '@DbuCoreBundle/Resources/public/css/dummy6.css'
+        '@DbuCoreBundle/Resources/public/css/dummy7.css'
+        '@DbuCoreBundle/Resources/public/css/dummy8.css'
+        '@DbuCoreBundle/Resources/public/css/dummy9.css'
+        '@DbuCoreBundle/Resources/public/css/visualize-ie-problem.css'
+        output='css/style.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" media="screen" type="text/css"/>
+    {% endstylesheets %}
 {% endblock %}
