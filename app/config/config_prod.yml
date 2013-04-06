@@ -17,3 +17,12 @@ monolog:
             type:  stream
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
+
+assetic:
+    filters:
+        yui_css:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+            apply_to: "\.css$"
+        yui_js:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+            apply_to: "\.js$"
