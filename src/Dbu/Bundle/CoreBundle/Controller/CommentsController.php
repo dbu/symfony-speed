@@ -12,16 +12,26 @@ class CommentsController extends Controller
 
     public function commentsAction()
     {
-        return $this->render('DbuCoreBundle:Comments:comments.html.twig', array(
+        $response = $this->render('DbuCoreBundle:Comments:comments.html.twig', array(
             'comments' => $this->getComments(),
         ));
+        $response->setMaxAge(3600); // will be manually invalidated
+        $response->setPublic();
+        return $response;
     }
 
     public function formAction()
     {
-        return $this->render('DbuCoreBundle:Comments:form.html.twig', array(
+        $response = $this->render('DbuCoreBundle:Comments:form.html.twig', array(
             'form' => $this->getForm()->createView(),
         ));
+        // depends on the session to inline the user name
+        // it this is the only bit that prevents caching, you could use javascript
+        // to pre-fill the name in the frontend and cache the form
+        $response->setVary('Cookie', false);
+        $response->setMaxAge(0);
+        $response->setPrivate();
+        return $response;
     }
 
     public function postAction(Request $request)
@@ -36,9 +46,10 @@ class CommentsController extends Controller
                 die('failed to write the data file');
             }
 
-            // invalidate the varnish cache of home page so the new comment is shown
+            // invalidate the varnish cache of the comments sub block so the new comment is shown
             $varnish = $this->container->get('liip_cache_control.varnish');
-            $varnish->invalidatePath($this->generateUrl('home'));
+            $kernel = $this->container->get('http_kernel');
+            $varnish->invalidatePath($kernel->generateInternalUri('DbuCoreBundle:Comments:comments'));
 
             return $this->redirect($this->generateUrl('home'));
         }

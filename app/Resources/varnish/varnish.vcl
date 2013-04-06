@@ -31,6 +31,9 @@ acl purge {
 # incoming client request
 sub vcl_recv {
 
+    # tell backend we can handle ESI
+    set req.http.Surrogate-Capability = "abc=ESI/1.0";
+
     if (req.request == "PURGE") {
         if (!client.ip ~ purge) {
             error 405 "Not allowed.";
@@ -65,16 +68,23 @@ sub vcl_recv {
         return (pass);
     }
 
-    # Lookup static files even with cookie and potential cache-busting query string
-    if (req.url ~ ".*\.(css|js|png|gif|jpg|jpeg|swf|eot|woff|ttf)(\?.*)?$") {
-        return (lookup);
-    }
+    # don't compress when using esi
+    unset req.http.Accept-Encoding;
 
-    # the default routine will only lookup if there is no cookie
+    # try to lookup even if there is a cookie
+    return (lookup);
 }
 
 # received data from backend
 sub vcl_fetch {
+
+    if (beresp.http.Surrogate-Control ~ "ESI/1.0") {
+        unset beresp.http.Surrogate-Control;
+        # for varnish < 3.0:
+        esi;
+        # if you have varnish 3.0 or higher, enable this line instead:
+        #set beresp.do_esi = true;
+    }
 
     # set cache lifetime based on custom header
     # unfortunately beresp.ttl can only be set to constant values and not dynamically
@@ -91,6 +101,20 @@ sub vcl_fetch {
     # respect backend do not cache instruction
     if (beresp.http.Cache-Control ~ "(no-cache|no-store)") {
         return (pass);
+    }
+
+    # do not cache subrequests that vary (i.e. on cookie)
+    if (beresp.http.Vary) {
+        return (pass);
+    }
+}
+
+sub vcl_deliver {
+    if (! req.url ~ ".*\.(css|js|png|gif|jpg|jpeg|swf|eot|woff|ttf)(\?.*)?$") {
+        # avoid caching by intermediary caches to mix up content of different users
+        set resp.http.Vary = "Cookie";
+        # if-modified-since will only confuse us, remove it
+        unset resp.http.Last-Modified;
     }
 }
 
