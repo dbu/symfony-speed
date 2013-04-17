@@ -1,4 +1,4 @@
-Symfony Frontend Performance Optimiziation Demo
+Symfony Frontend Performance Optimization Demo
 ===============================================
 
 This demo contains a couple of branches that demonstrate the steps from a
@@ -13,13 +13,13 @@ latency and huge css and javascript files for a good reason :-)
 # Play with this demo
 
 Symfony and Apache both do an impressively good job at coping with slow code
-and big files. Running webserver and browser on the same maschine also gives
+and big files. Running webserver and browser on the same machine also gives
 unrealistic latencies. To get the full pain, I did:
 
 * Disable symfony caching by adding ``cache: false`` to the twig section in config.yml
 * Disable gzip compression in Apache by adding ``SetEnv no-gzip`` to the vhost entry
 * Disable KeepAlive in apache.conf to make the problem of lots of single files more visible
-* Use netem or [sloppy](http://www.dallaway.com/sloppy/) to simulate a low bandwith
+* Use netem or [sloppy](http://www.dallaway.com/sloppy/) to simulate a low bandwidth
 
 Of course, using and optimizing these features instead of disabling them can be
 a cheap way to speed up your website. You should look into this topic as well.
