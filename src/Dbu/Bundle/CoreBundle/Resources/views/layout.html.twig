@@ -6,8 +6,6 @@
 
         {% include 'DbuCoreBundle::stylesheets.html.twig' %}
 
-        {% include 'DbuCoreBundle::javascripts.html.twig' %}
-
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
@@ -91,5 +89,11 @@
         </div>
 
         </div>
+
+        {# put javascript at the bottom:
+           the browser waits with rendering the html until all files referenced before that element have been loaded
+        #}
+        {% include 'DbuCoreBundle::javascripts.html.twig' %}
+
     </body>
 </html>
